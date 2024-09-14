@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    body {
+      font-family: "Roboto", sans-serif;
+      background-color: whitesmoke;
+      margin-right: 12em;
+      margin-left: 12em;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .top {
+      justify-content: center;
+      text-align: center;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    .top h1 {
+      font-weight: 400;
+    }
+    .top p {
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+
+    h3 {
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 66.66%;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 15px;
+    }
+
+    .form-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input,
+    select {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    hr {
+      margin: 1rem 0;
+      color: inherit;
+      border: 0;
+      border-top: 1px solid;
+      opacity: 0.25;
+    }
+
+    .checkbox {
+      width: 1em;
+      height: 1em;
+    }
+
+    .labelForCheck {
+      font-size: 1em;
+    }
+
+    .radioContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .cardInfoContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      padding: 16px;
+      background-color: #0d6efd;
+      font-size: 18px;
+      color: whitesmoke;
+    }
+
+    footer {
+      margin-top: 32px;
+      text-align: center;
+    }
+    footer p {
+      font-size: 0.8em;
+      opacity: 0.5;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      padding-left: 3%;
+    }
+
+    .sideLogo {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      color: #0d6efd;
+    }
+
+    .sideLogo span {
+      border-radius: 50%;
+      background-color: #0d6efd;
+      padding: 6px 12px 6px 12px;
+      color: whitesmoke;
+    }
+
+    .listGroup {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      margin-bottom: 0;
+      border-radius: 8px;
+      border: #6c757d solid 1px;
+      background-color: #fff;
+    }
+    dl,
+    ol,
+    ul {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .listItem {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 18px 10px 18px;
+      border-bottom: #6c757d solid 1px;
+    }
+
+    .listItem:last-child {
+      border-bottom: none;
+    }
+    .listItem:last-child span {
+      font-weight: bold;
+      color: black;
+    }
+    .listItem h3 {
+      font-size: 1em;
+      margin: 0;
+    }
+    .listItem p {
+      font-size: 0.875em;
+      color: #6c757d;
+      margin: 0;
+    }
+    .listItem span {
+      font-size: 1em;
+
+      color: #6c757d;
+    }
+
+    .promoForm {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 16px 10px 16px;
+      background-color: #fff;
+      border-radius: 12px;
+      border: #6c757d solid 1px;
+    }
+
+    .promoForm .btn5 {
+      background-color: #6c757d;
+      color: whitesmoke;
+      border: #6c757d solid 1px;
+      border-radius: 4px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .promoForm .promoInput {
+      border: #6c757d solid 1px;
+      border-radius: 4px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="top">
+          <svg
+            height="70"
+            viewBox="0 0 512 407.864"
+            width="70"
+            xmlns="http://www.w3.org/2000/svg"
+            class="logo"
+          >
+            <path
+              d="m106.344 0c-29.214 0-50.831 25.57-49.863 53.3.929 26.641-.278 61.145-8.964 89.283-8.717 28.217-23.449 46.098-47.517 48.393v25.912c24.068 2.3 38.8 20.172 47.516 48.393 8.687 28.138 9.893 62.642 8.964 89.283-.968 27.726 20.649 53.3 49.868 53.3h299.347c29.214 0 50.827-25.57 49.859-53.3-.929-26.641.278-61.145 8.964-89.283 8.717-28.221 23.413-46.1 47.482-48.393v-25.912c-24.068-2.3-38.764-20.172-47.482-48.393-8.687-28.134-9.893-62.642-8.964-89.283.968-27.726-20.645-53.3-49.859-53.3h-299.355zm240.775 251.067c0 38.183-28.481 61.34-75.746 61.34h-80.458a8.678 8.678 0 0 1 -8.678-8.678v-199.593a8.678 8.678 0 0 1 8.678-8.678h80c39.411 0 65.276 21.348 65.276 54.124 0 23.005-17.4 43.6-39.567 47.208v1.2c30.176 3.31 50.495 24.21 50.495 53.077zm-84.519-128.1h-45.876v64.8h38.639c29.87 0 46.34-12.028 46.34-33.527-.003-20.148-14.163-31.273-39.103-31.273zm-45.876 90.511v71.411h47.564c31.1 0 47.573-12.479 47.573-35.931s-16.935-35.484-49.573-35.484h-45.564z"
+              fill="#7952b3"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <h1>Checkout form</h1>
+          <p>
+            Below is an example form built entirely with Bootstrap’s form
+            controls. Each required form group has a validation state that can
+            be triggered by attempting to submit the form without completing it.
+          </p>
+        </div>
+
+        <form class="form-container">
+          <h3 class="">Billing address</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First name</label>
+              <input type="text" class="first-name" />
+              <div
+                class="invalid-feedback"
+                style="
+                  display: none;
+                  font-size: 0.875em;
+                  color: #dc3545;
+                  margin-top: 6px;
+                "
+              >
+                Valid first name is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last name</label>
+              <input type="text" class="last-name" />
+              <div
+                class="invalid-feedback"
+                style="
+                  display: none;
+                  font-size: 0.875em;
+                  color: #dc3545;
+                  margin-top: 6px;
+                "
+              >
+                Valid last name is required.
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="username" />
+              <div
+                class="invalid-feedback"
+                style="
+                  display: none;
+                  font-size: 0.875em;
+                  color: #dc3545;
+                  margin-top: 6px;
+                "
+              >
+                Valid username is required.
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email (Optional)</label>
+              <input type="email" class="email" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" class="address" />
+              <div
+                class="invalid-feedback"
+                style="
+                  display: none;
+                  font-size: 0.875em;
+                  color: #dc3545;
+                  margin-top: 6px;
+                "
+              >
+                Valid address is required.
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="address2">Address 2 (Optional)</label>
+              <input type="text" class="address2" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country">
+                <option>Choose...</option>
+                <option>US</option>
+              </select>
+              <div
+                class="invalid-feedback"
+                style="
+                  display: none;
+                  font-size: 0.875em;
+                  color: #dc3545;
+                  margin-top: 6px;
+                "
+              >
+                Valid country is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="state">State</label>
+              <select id="state">
+                <option>Choose...</option>
+                <option>California</option>
+              </select>
+              <div
+                class="invalid-feedback"
+                style="
+                  display: none;
+                  font-size: 0.875em;
+                  color: #dc3545;
+                  margin-top: 6px;
+                "
+              >
+                Valid state is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="zip">Zip</label>
+              <input type="text" id="zip" />
+              <div
+                class="invalid-feedback"
+                style="
+                  display: none;
+                  font-size: 0.875em;
+                  color: #dc3545;
+                  margin-top: 6px;
+                "
+              >
+                Valid Zip is required.
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="checkPart">
+            <div class="form-row">
+              <input type="checkbox" name="" id="" class="checkbox" />
+              <label class="labelForCheck"
+                >Shipping address is the same as my billing address</label
+              >
+            </div>
+
+            <div class="form-row">
+              <input type="checkbox" name="" id="" class="checkbox" />
+              <label class="labelForCheck"
+                >Save this information for next time</label
+              >
+            </div>
+          </div>
+          <hr />
+          <div class="paymentPart">
+            <h3>Payment</h3>
+
+            <div class="radioContainer">
+              <div class="radio-row">
+                <input type="radio" /> <label>Credit Card</label>
+              </div>
+              <div class="radio-row">
+                <input type="radio" /> <label>Debit Card</label>
+              </div>
+              <div><input type="radio" /> <label>PayPal</label></div>
+            </div>
+
+            <div class="cardInfoContainer">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Name on card</label>
+                  <input type="text" />
+                  <p  color: #6c757d">
+                    Full name as displayed on card
+                  </p>
+                  <div
+                    class="invalid-feedback"
+                    style="
+                      display: none;
+                      font-size: 0.875em;
+                      color: #dc3545;
+                      margin-top: 6px;
+                    "
+                  >
+                    Name on card is required.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Credit card number</label>
+                  <input type="text" />
+                  <div
+                    class="invalid-feedback"
+                    style="
+                      display: none;
+                      font-size: 0.875em;
+                      color: #dc3545;
+                      margin-top: 6px;
+                    "
+                  >
+                    Credit card number is required.
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Expiration</label>
+                  <input type="text" />
+                  <div
+                    class="invalid-feedback"
+                    style="
+                      display: none;
+                      font-size: 0.875em;
+                      color: #dc3545;
+                      margin-top: 6px;
+                    "
+                  >
+                    Expiration date required.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>CVV</label>
+                  <input type="text" />
+                  <div
+                    class="invalid-feedback"
+                    style="
+                      display: none;
+                      font-size: 0.875em;
+                      color: #dc3545;
+                      margin-top: 6px;
+                    "
+                  >
+                    Security code required.
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <input type="submit" value="Continue to checkout" class="btn" />
+            </div>
+          </div>
+        </form>
+
+        <div class="sidebar">
+          <h3 class="sideLogo">
+            Your cart
+            <span>3</span>
+          </h3>
+
+          <ul class="listGroup">
+            <li class="listItem">
+              <div>
+                <h3>Product name</h3>
+                <p>Brief description</p>
+              </div>
+              <span>$12</span>
+            </li>
+            <li class="listItem">
+              <div>
+                <h3>Second product</h3>
+                <p>Brief description</p>
+              </div>
+              <span>$8</span>
+            </li>
+            <li class="listItem">
+              <div>
+                <h3>Third item</h3>
+                <p>Brief description</p>
+              </div>
+              <span>$5</span>
+            </li>
+            <li class="listItem">
+              <div>
+                <h3>Promo code</h3>
+                <p>EXAMPLECODE</p>
+              </div>
+              <span>-$5</span>
+            </li>
+            <li class="listItem">
+              <div>
+                <h3>Total (USD)</h3>
+              </div>
+              <span>$20</span>
+            </li>
+          </ul>
+
+          <form class="promoForm">
+            <input type="text" placeholder="Promo code" class="promoInput" />
+            <input type="submit" value="Redeem" class="btn5" />
+          </form>
+        </div>
+      </div>
+
+      <footer>
+        <p>© 2017–2022 Company Name</p>
+      </footer>
+    </div>
+
+    <script>
+      const formContainer =
+        document.getElementsByClassName("form-container")[0];
+
+      checkVaild = (e) => {
+        e.preventDefault();
+        console.log(e);
+        let inputs = document.querySelectorAll("input, select");
+        let isValid;
+
+        inputs.forEach(function (input) {
+         
+          var feedback = input.parentElement.querySelector(".invalid-feedback");
+
+          if (!input.value.trim()) {
+            if (feedback) {
+              feedback.style.display = "inline";
+            }
+            isValid = false;
+          } else {
+            // feedback 요소가 존재하는지 확인
+            if (feedback) {
+              feedback.style.display = "none";
+              isValid = true;
+            }
+          }
+        });
+
+        if (isValid == true) {
+          alert("제출 성공");
+        }
+      };
+
+      formContainer.addEventListener("submit", checkVaild);
+    </script>
+  </body>
+</html>

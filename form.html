@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>22400175 김준성</title>
+  </head>
+  <style>
+    .textInput,
+    .btn1,
+    .btn2,
+    .btn3 {
+      padding: 8px 12px 8px 12px;
+    }
+
+    .btn1 {
+      background-color: blue;
+      color: black;
+      border: none;
+    }
+
+    .btn2 {
+      background-color: rgb(142, 214, 70);
+      color: black;
+      border: none;
+    }
+
+    .btn3 {
+      background-color: rgb(185, 129, 147);
+      color: black;
+      border: none;
+    }
+  </style>
+  <body>
+    <div class="contatainer">
+      <h1>Dynamic Web page</h1>
+
+      <input type="text" class="textInput" />
+      <input type="button" value="추가" class="btn1" />
+      <input type="button" value="삭제" class="btn2" />
+      <input type="button" value="모두 삭제" class="btn3" />
+
+      <div class="divList">
+        <ul class="ulList"></ul>
+      </div>
+    </div>
+  </body>
+  <script>
+    var value = document.querySelector(".textInput").value;
+    const btn1 = document.querySelector(".btn1");
+    const btn2 = document.querySelector(".btn2");
+    const btn3 = document.querySelector(".btn3");
+    var ulList = document.querySelector(".divList");
+    var arr = [];
+
+    addList = (e) => {
+      e.preventDefault();
+      var value = document.querySelector(".textInput").value;
+      if (value.includes(",")) {
+        const list = value.split(",");
+
+        for (i = 0; i < list.length; i++) {
+          arr.push(list[i].trim());
+        }
+      } else if (value.trim() !== "") {
+        arr.push(value.trim());
+      }
+
+      document.querySelector(".textInput").value = "";
+      console.log(arr);
+      paintList();
+    };
+
+    removeList = (e) => {
+      e.preventDefault();
+      var value = document.querySelector(".textInput").value;
+      if (value.includes(",")) {
+        const list = value.split(",");
+        for (i = 0; i < list.length; i++) {
+          const trimmedVal = list[i].trim();
+          arr = arr.filter((item) => item !== trimmedVal);
+        }
+      } else {
+        arr = arr.filter((item) => item !== value.trim());
+      }
+      document.querySelector(".textInput").value = "";
+      console.log(arr);
+      paintList();
+    };
+
+    paintList = (e) => {
+      ulList.innerHTML = "";
+
+      if (arr == []) {
+        null;
+      } else {
+        arr.forEach((val) => {
+          var newLi = document.createElement("li");
+          newLi.innerText = val;
+          ulList.appendChild(newLi);
+        });
+      }
+    };
+    removeAllList = (e) => {
+      e.preventDefault();
+      arr = [];
+      paintList();
+    };
+    btn1.addEventListener("click", addList);
+    btn2.addEventListener("click", removeList);
+    btn3.addEventListener("click", removeAllList);
+  </script>
+</html>
