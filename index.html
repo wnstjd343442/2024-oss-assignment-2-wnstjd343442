@@ -3,326 +3,326 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkout form</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Stack under flow</title>
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
     />
+
+    <style>
+      .nav-link:hover {
+        background-color: rgb(224, 224, 224);
+      }
+      .hover {
+        background-color: rgb(224, 224, 224);
+      }
+    </style>
   </head>
 
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="top">
-          <svg
-            height="70"
-            viewBox="0 0 512 407.864"
-            width="70"
-            xmlns="http://www.w3.org/2000/svg"
-            class="logo"
+    <header class="p-1 bg-white border border-bottom-1 text-dark">
+      <div class="container-xl">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <a
+            href="/"
+            class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
           >
-            <path
-              d="m106.344 0c-29.214 0-50.831 25.57-49.863 53.3.929 26.641-.278 61.145-8.964 89.283-8.717 28.217-23.449 46.098-47.517 48.393v25.912c24.068 2.3 38.8 20.172 47.516 48.393 8.687 28.138 9.893 62.642 8.964 89.283-.968 27.726 20.649 53.3 49.868 53.3h299.347c29.214 0 50.827-25.57 49.859-53.3-.929-26.641.278-61.145 8.964-89.283 8.717-28.221 23.413-46.1 47.482-48.393v-25.912c-24.068-2.3-38.764-20.172-47.482-48.393-8.687-28.134-9.893-62.642-8.964-89.283.968-27.726-20.645-53.3-49.859-53.3h-299.355zm240.775 251.067c0 38.183-28.481 61.34-75.746 61.34h-80.458a8.678 8.678 0 0 1 -8.678-8.678v-199.593a8.678 8.678 0 0 1 8.678-8.678h80c39.411 0 65.276 21.348 65.276 54.124 0 23.005-17.4 43.6-39.567 47.208v1.2c30.176 3.31 50.495 24.21 50.495 53.077zm-84.519-128.1h-45.876v64.8h38.639c29.87 0 46.34-12.028 46.34-33.527-.003-20.148-14.163-31.273-39.103-31.273zm-45.876 90.511v71.411h47.564c31.1 0 47.573-12.479 47.573-35.931s-16.935-35.484-49.573-35.484h-45.564z"
-              fill="#7952b3"
-              fill-rule="evenodd"
-            />
-          </svg>
-          <h1>Checkout form</h1>
-          <p>
-            Below is an example form built entirely with Bootstrap’s form
-            controls. Each required form group has a validation state that can
-            be triggered by attempting to submit the form without completing it.
-          </p>
-        </div>
+            <img src="./image.png" alt="" height="40" width="32" />
+            <use xlink:href="#bootstrap"></use>
+          </a>
 
-        <form class="form-container">
-          <h3 class="">Billing address</h3>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="first-name">First name</label>
-              <input required type="text" class="first-name" />
-              <div
-                class="invalid-feedback"
-                style="
-                  display: none;
-                  font-size: 0.875em;
-                  color: #dc3545;
-                  margin-top: 6px;
-                "
-              >
-                Valid first name is required.
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="last-name">Last name</label>
-              <input required type="text" class="last-name" />
-              <div
-                class="invalid-feedback"
-                style="
-                  display: none;
-                  font-size: 0.875em;
-                  color: #dc3545;
-                  margin-top: 6px;
-                "
-              >
-                Valid last name is required.
-              </div>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input required type="text" class="username" />
-              <div
-                class="invalid-feedback"
-                style="
-                  display: none;
-                  font-size: 0.875em;
-                  color: #dc3545;
-                  margin-top: 6px;
-                "
-              >
-                Valid username is required.
-              </div>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email (Optional)</label>
-              <input type="email" class="email" />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="address">Address</label>
-              <input required type="text" class="address" />
-              <div
-                class="invalid-feedback"
-                style="
-                  display: none;
-                  font-size: 0.875em;
-                  color: #dc3545;
-                  margin-top: 6px;
-                "
-              >
-                Valid address is required.
-              </div>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="address2">Address 2 (Optional)</label>
-              <input required type="text" class="address2" />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="country">Country</label>
-              <select id="country">
-                <option>Choose...</option>
-              </select>
-              <div
-                class="invalid-feedback"
-                style="
-                  display: none;
-                  font-size: 0.875em;
-                  color: #dc3545;
-                  margin-top: 6px;
-                "
-              >
-                Valid country is required.
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="state">State</label>
-              <select id="state">
-                <option>Choose...</option>
-              </select>
-              <div
-                class="invalid-feedback"
-                style="
-                  display: none;
-                  font-size: 0.875em;
-                  color: #dc3545;
-                  margin-top: 6px;
-                "
-              >
-                Valid state is required.
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="zip">Zip</label>
-              <input required type="text" id="zip" />
-              <div
-                class="invalid-feedback"
-                style="
-                  display: none;
-                  font-size: 0.875em;
-                  color: #dc3545;
-                  margin-top: 6px;
-                "
-              >
-                Valid Zip is required.
-              </div>
-            </div>
-          </div>
-          <hr />
-          <div class="checkPart">
-            <div class="form-row">
-              <input type="checkbox" name="" id="" class="checkbox" />
-              <label class="labelForCheck"
-                >Shipping address is the same as my billing address</label
-              >
-            </div>
+          <h5 class="mb-0">
+            <a
+              href="#"
+              class="mb-lg-0 border-0 text-decoration-none text-black fw-light align-middle"
+              >Stack <span class="fw-bold">overflow</span></a
+            >
+          </h5>
 
-            <div class="form-row">
-              <input type="checkbox" name="" id="" class="checkbox" />
-              <label class="labelForCheck"
-                >Save this information for next time</label
-              >
-            </div>
-          </div>
-          <hr />
-          <div class="paymentPart">
-            <h3>Payment</h3>
-
-            <div class="radioContainer">
-              <div class="radio-row">
-                <input type="radio" /> <label>Credit Card</label>
-              </div>
-              <div class="radio-row">
-                <input type="radio" /> <label>Debit Card</label>
-              </div>
-              <div><input type="radio" /> <label>PayPal</label></div>
-            </div>
-
-            <div class="cardInfoContainer">
-              <div class="form-row">
-                <div class="form-group">
-                  <label>Name on card</label>
-                  <input required type="text" />
-                  <p>Full name as displayed on card</p>
-                  <div
-                    class="invalid-feedback"
-                    style="
-                      display: none;
-                      font-size: 0.875em;
-                      color: #dc3545;
-                      margin-top: 6px;
-                    "
-                  >
-                    Name on card is required.
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>Credit card number</label>
-                  <input required type="text" />
-                  <div
-                    class="invalid-feedback"
-                    style="
-                      display: none;
-                      font-size: 0.875em;
-                      color: #dc3545;
-                      margin-top: 6px;
-                    "
-                  >
-                    Credit card number is required.
-                  </div>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label>Expiration</label>
-                  <input required type="text" />
-                  <div
-                    class="invalid-feedback"
-                    style="
-                      display: none;
-                      font-size: 0.875em;
-                      color: #dc3545;
-                      margin-top: 6px;
-                    "
-                  >
-                    Expiration date required.
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label>CVV</label>
-                  <input required type="text" />
-                  <div
-                    class="invalid-feedback"
-                    style="
-                      display: none;
-                      font-size: 0.875em;
-                      color: #dc3545;
-                      margin-top: 6px;
-                    "
-                  >
-                    Security code required.
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <input type="submit" value="Continue to checkout" class="btn" />
-            </div>
-          </div>
-        </form>
-
-        <div class="sidebar">
-          <h3 class="sideLogo">
-            Your cart
-            <span>3</span>
-          </h3>
-
-          <ul class="listGroup">
-            <li class="listItem">
-              <div>
-                <h3>Product name</h3>
-                <p>Brief description</p>
-              </div>
-              <span>$12</span>
-            </li>
-            <li class="listItem">
-              <div>
-                <h3>Second product</h3>
-                <p>Brief description</p>
-              </div>
-              <span>$8</span>
-            </li>
-            <li class="listItem">
-              <div>
-                <h3>Third item</h3>
-                <p>Brief description</p>
-              </div>
-              <span>$5</span>
-            </li>
-            <li class="listItem">
-              <div>
-                <h3>Promo code</h3>
-                <p>EXAMPLECODE</p>
-              </div>
-              <span>-$5</span>
-            </li>
-            <li class="listItem">
-              <div>
-                <h3>Total (USD)</h3>
-              </div>
-              <span>$20</span>
-            </li>
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 align-middle"
+          >
+            <li><a href="#" class="nav-link text-secondary">Home</a></li>
           </ul>
-
-          <form class="promoForm">
-            <input type="text" placeholder="Promo code" class="promoInput" />
-            <input type="submit" value="Redeem" class="btn5" />
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input
+              type="search"
+              class="form-control form-control-dark text-dark bg-white"
+              placeholder="Search..."
+              aria-label="Search"
+            />
           </form>
+
+          <div class="text-end">
+            <button
+              type="button"
+              class="btn btn-outline-light me-2 border border-primary text-primary"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="btn btn-warning bg-primary text-white border-white"
+            >
+              Sign-up
+            </button>
+          </div>
         </div>
       </div>
+    </header>
 
-      <footer>
-        <p>© 2017–2022 Company Name</p>
-      </footer>
+    <div class="contatiner d-flex justify-content-between">
+      <div
+        class="d-flex flex-column flex-shrink-0 pt-4 pb-4 bg-white text-dark"
+        style="
+          width: 168px;
+          height: 90vh;
+          border-right: 1px solid rgb(217, 217, 217);
+        "
+      >
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li>
+            <a href="#" class="nav-link text-dark fw-bold hover"> Index </a>
+          </li>
+          <li>
+            <a href="form _ nostyle.htm.html" class="nav-link text-dark">
+              Nostyled
+            </a>
+          </li>
+          <li>
+            <a href="form _ style.html" class="nav-link text-dark"> Styled </a>
+          </li>
+          <li>
+            <a href="form _js.html" class="nav-link text-dark"> StyledJS </a>
+          </li>
+          <li>
+            <a href="form.html" class="nav-link text-dark"> Form </a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="content" style="width: 100%">
+        <div id="main" class="m-3 d-flex flex-column">
+          <div class="heading d-flex justify-content-between pb-3">
+            <h2>All Questions</h2>
+
+            <a
+              class="btn btn-primary px-2 pt-3 pb-3"
+              role="button"
+              style="font-size: 16px"
+              >Ask Question</a
+            >
+          </div>
+          <nav class="d-flex justify-content-lg-end">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link text-black fw-bold" href="#">Interesting</a>
+              </li>
+              <li class="page-item text-black">
+                <a class="page-link text-black" href="#">Hot</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link text-black" href="#">Week</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link text-black" href="#">Month</a>
+              </li>
+            </ul>
+          </nav>
+          <hr />
+          <div class="questions">
+            <div class="question d-flex flex-column justify-content-between">
+              <div class="questionInfo-1 m-1">0 votes 0 answers 4 views</div>
+              <div class="questionSummary">
+                <a
+                  href="#"
+                  class="text-decoration-none m-1"
+                  style="font-size: 20px"
+                  >One Interface but different types</a
+                >
+                <div class="questionInfo-2 d-flex justify-content-between">
+                  <div class="tag d-flex m-1">
+                    <div
+                      class="px-1 fw-bold m-1"
+                      style="
+                        background-color: rgb(216, 216, 216);
+                        border-radius: 4px;
+                        font-size: 14px;
+                      "
+                    >
+                      c#
+                    </div>
+                    <div
+                      class="px-1 fw-bold m-1"
+                      style="
+                        background-color: rgb(216, 216, 216);
+                        border-radius: 4px;
+                        font-size: 14px;
+                      "
+                    >
+                      javascript
+                    </div>
+                    <div
+                      class="px-1 fw-bold m-1"
+                      style="
+                        background-color: rgb(216, 216, 216);
+                        border-radius: 4px;
+                        font-size: 14px;
+                      "
+                    >
+                      html
+                    </div>
+                  </div>
+                  <div class="profile m-1" style="color: rgb(170, 170, 170)">
+                    <span class="fw-bold text-black">1,402</span>
+                    <span>asked 20 secs ago</span>
+                  </div>
+                </div>
+                <hr />
+              </div>
+            </div>
+
+            <div class="question d-flex flex-column justify-content-between">
+              <div class="questionInfo-1 m-1">0 votes 0 answers 4 views</div>
+              <div class="questionSummary">
+                <a
+                  href="#"
+                  class="text-decoration-none m-1"
+                  style="font-size: 20px"
+                  >What associated DLL's need to be included for the release of
+                  a .NET 6.0 console app?</a
+                >
+                <div class="questionInfo-2 d-flex justify-content-between">
+                  <div class="tag d-flex m-1">
+                    <div
+                      class="px-1 fw-bold m-1"
+                      style="
+                        background-color: rgb(216, 216, 216);
+                        border-radius: 4px;
+                        font-size: 14px;
+                      "
+                    >
+                      NET
+                    </div>
+                    <div
+                      class="px-1 fw-bold m-1"
+                      style="
+                        background-color: rgb(216, 216, 216);
+                        border-radius: 4px;
+                        font-size: 14px;
+                      "
+                    >
+                      app
+                    </div>
+                  </div>
+                  <div class="profile m-1" style="color: rgb(170, 170, 170)">
+                    <span class="fw-bold text-black">5</span>
+                    <span>asked 20 secs ago</span>
+                  </div>
+                </div>
+                <hr />
+              </div>
+            </div>
+
+            <div class="question d-flex flex-column justify-content-between">
+              <div class="questionInfo-1 m-1">0 votes 0 answers 4 views</div>
+              <div class="questionSummary">
+                <a
+                  href="#"
+                  class="text-decoration-none m-1"
+                  style="font-size: 20px"
+                  >How can I use rvm and asdf simultaneously?</a
+                >
+                <div class="questionInfo-2 d-flex justify-content-between">
+                  <div class="tag d-flex m-1">
+                    <div
+                      class="px-1 fw-bold m-1"
+                      style="
+                        background-color: rgb(216, 216, 216);
+                        border-radius: 4px;
+                        font-size: 14px;
+                      "
+                    >
+                      ruby
+                    </div>
+                  </div>
+                  <div class="profile m-1" style="color: rgb(170, 170, 170)">
+                    <span class="fw-bold text-black">3,420</span>
+                    <span>asked 49 secs ago</span>
+                  </div>
+                </div>
+                <hr />
+              </div>
+            </div>
+
+            <div class="question d-flex flex-column justify-content-between">
+              <div class="questionInfo-1 m-1">1 votes 2 answers 1 views</div>
+              <div class="questionSummary">
+                <a
+                  href="#"
+                  class="text-decoration-none m-1"
+                  style="font-size: 20px"
+                  >Returning an error from server action Next.js</a
+                >
+                <div class="questionInfo-2 d-flex justify-content-between">
+                  <div class="tag d-flex m-1">
+                    <div
+                      class="px-1 fw-bold m-1"
+                      style="
+                        background-color: rgb(216, 216, 216);
+                        border-radius: 4px;
+                        font-size: 14px;
+                      "
+                    >
+                      nextjs
+                    </div>
+                    <div
+                      class="px-1 fw-bold m-1"
+                      style="
+                        background-color: rgb(216, 216, 216);
+                        border-radius: 4px;
+                        font-size: 14px;
+                      "
+                    >
+                      javascript
+                    </div>
+                    <div
+                      class="px-1 fw-bold m-1"
+                      style="
+                        background-color: rgb(216, 216, 216);
+                        border-radius: 4px;
+                        font-size: 14px;
+                      "
+                    >
+                      server
+                    </div>
+                    <div
+                      class="px-1 fw-bold m-1"
+                      style="
+                        background-color: rgb(216, 216, 216);
+                        border-radius: 4px;
+                        font-size: 14px;
+                      "
+                    >
+                      fullstack
+                    </div>
+                  </div>
+                  <div class="profile m-1" style="color: rgb(170, 170, 170)">
+                    <span class="fw-bold text-black">5,321</span>
+                    <span>asked 4 hours ago</span>
+                  </div>
+                </div>
+                <hr />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
