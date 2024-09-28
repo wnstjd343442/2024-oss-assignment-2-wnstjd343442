@@ -4,59 +4,164 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stack under flow</title>
-  </head>
-  <body>
-    <header></header>
 
-    <div class="contatiner">
-      <div id="left-side bar">
-        <nav class="nav">
-          <ul class="navLinks">
-            <li><a href="index.html">Index</a></li>
-            <li><a href="index.html">Index</a></li>
-            <li><a href="index.html">Index</a></li>
-            <li><a href="index.html">Index</a></li>
-            <li><a href="index.html">Index</a></li>
-            <li><a href="index.html">Index</a></li>
-            <li><a href="index.html">Index</a></li>
-            <li><a href="index.html">Index</a></li>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="mycss.css" />
+  </head>
+
+  <body>
+    <header class="p-1 bg-white border border-bottom-1 text-dark">
+      <div class="container-xl">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <a
+            href=""
+            class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+          >
+            <img src="./image.png" alt="" height="40" width="32" />
+            <use xlink:href="#bootstrap"></use>
+          </a>
+
+          <h5 class="mb-0">
+            <a
+              href="#"
+              class="mb-lg-0 border-0 text-decoration-none text-black fw-light align-middle"
+              >Stack <span class="fw-bold">overflow</span></a
+            >
+          </h5>
+
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 align-middle"
+          >
+            <li><a href="#" class="nav-link text-secondary">Home</a></li>
           </ul>
-        </nav>
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input
+              type="search"
+              class="form-control form-control-dark text-dark bg-white"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
+
+          <div class="text-end">
+            <button
+              type="button"
+              class="btn btn-outline-light me-2 border border-primary text-primary"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="btn btn-warning bg-primary text-white border-white"
+            >
+              Sign-up
+            </button>
+          </div>
+        </div>
       </div>
-      <div id="content">
-        <div id="main">
-          <div class="heading">
-            <h1>All Questions</h1>
-            <div class="askBtn">
-              <a href="">Ask Question (ADD)</a>
+    </header>
+
+    <div class="contatiner d-flex justify-content-between">
+      <div
+        class="left-sidebar d-flex flex-column flex-shrink-0 pt-4 pb-4 bg-white text-dark"
+        style="
+          width: 168px;
+          height: 90vh;
+          border-right: 1px solid rgb(217, 217, 217);
+        "
+      >
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li>
+            <a href="/index.html" class="nav-link text-dark fw-bold hover">
+              Index
+            </a>
+          </li>
+          <li>
+            <a href="form _ nostyle.htm.html" class="nav-link text-dark">
+              Nostyled
+            </a>
+          </li>
+          <li>
+            <a href="form _ style.html" class="nav-link text-dark"> Styled </a>
+          </li>
+          <li>
+            <a href="form _js.html" class="nav-link text-dark"> StyledJS </a>
+          </li>
+          <li>
+            <a href="form.html" class="nav-link text-dark"> Form </a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="content" style="width: 100%">
+        <div id="main" class="m-3 d-flex flex-column">
+          <div class="heading d-flex justify-content-between pb-3">
+            <h2>Prof. kimkwang, I love u</h2>
+
+            <div>
+              <a
+                class="askBtn btn btn-primary px-2 pt-3 pb-3"
+                role="button"
+                style="font-size: 16px"
+                href="add.html"
+                >Ask Question</a
+              >
+              <a
+                class="askBtn btn btn-primary px-2 pt-3 pb-3"
+                role="button"
+                style="font-size: 16px"
+                href="edit.html"
+                >Edit Question</a
+              >
             </div>
-            <!-- bootstrap Tag 사용 -->
           </div>
-          <div class="questions">
-            <div class="question">
-              <div class="questionInfo-1"></div>
-              <div class="questionSummary">
-                <h3>One Interface but different types</h3>
-                <p>
-                  I have single interface one is mostly all kind of types, but i
-                  want to use the same interface, again but with all types as
-                  "strings". how to do it without writing the types twice?
-                  Thanks ...
-                </p>
-                <div class="questionInfo-2">
-                  <div class="tag"></div>
-                  <div class="profile">
-                    <span class="nickname">David</span>
-                    <span>1,402</span>
-                    <span>asked 20 secs ago</span>
-                  </div>
-                </div>
-              </div>
+
+          <hr />
+
+          <p class="des">
+            안녕하세요 전전새내기입니다! 저는 한동대학교 학생입니다 <br />저도
+            코딩 잘하고 싶은데 방법 좀 알려주세요! <br />
+            너무 궁금합니다 내공 5000점 드립니다 많은 답변 부탁드립니다
+          </p>
+          <div class="d-flex questionInfo-1 m-1">0 votes 0 answers 4 views</div>
+          <div class="tag d-flex m-1">
+            <div
+              class="px-1 fw-bold m-1"
+              style="
+                background-color: rgb(216, 216, 216);
+                border-radius: 4px;
+                font-size: 14px;
+              "
+            >
+              NET
+            </div>
+            <div
+              class="px-1 fw-bold m-1"
+              style="
+                background-color: rgb(216, 216, 216);
+                border-radius: 4px;
+                font-size: 14px;
+              "
+            >
+              app
             </div>
           </div>
+          <hr />
+          <h5>Comment</h5>
+          <hr />
+          <p class="ans">
+            생각후코딩 추천드립니다 코딩은 생각을 필요로 합니다 생각후코딩을
+            추천합니다.
+          </p>
         </div>
       </div>
     </div>
   </body>
 </html>
-s
