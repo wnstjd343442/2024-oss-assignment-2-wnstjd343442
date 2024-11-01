@@ -1,0 +1,156 @@
+{
+  "info": [
+    {
+      "id": "b74b",
+      "nickname": "codeMaster42",
+      "title": "JavaScript에서 배열 요소 제거하기",
+      "description": "JavaScript 배열에서 특정 요소를 삭제하는 방법이 궁금합니다.",
+      "tags": [
+        "JavaScript 배열 함수"
+      ],
+      "time": "2024-11-01",
+      "votes": 0,
+      "view": 0
+    },
+    {
+      "id": "938f",
+      "nickname": "pyth0nista",
+      "title": "Python으로 텍스트 파일 읽기",
+      "description": "Python을 사용하여 텍스트 파일을 읽는 가장 간단한 방법은 무엇인가요?",
+      "tags": [
+        "Python",
+        "파일 처리",
+        "텍스트"
+      ],
+      "time": "2024-11-01",
+      "votes": 0,
+      "view": 0
+    },
+    {
+      "id": "9764",
+      "nickname": "data_driven",
+      "title": "SQL 조인(join) 최적화 방법",
+      "description": "큰 데이터셋을 다룰 때 SQL 조인을 최적화하는 팁이 있을까요?",
+      "tags": [
+        "SQL",
+        "데이터베이스",
+        "최적화"
+      ],
+      "time": "2024-11-01",
+      "votes": 0,
+      "view": 0
+    },
+    {
+      "id": "f23d",
+      "nickname": "debugQueen",
+      "title": "CSS Flexbox 정렬 이슈",
+      "description": "Flexbox를 사용하여 아이템을 정렬하는데 자꾸 위치가 엉뚱하게 잡힙니다. 해결 방법이 있을까요?",
+      "tags": [
+        "CSS",
+        "Flexbox",
+        "정렬"
+      ],
+      "time": "2024-11-01",
+      "votes": 0,
+      "view": 0
+    },
+    {
+      "id": "ef67",
+      "nickname": "java_ninja",
+      "title": "Java에서 NullPointerException 예외 처리",
+      "description": "NullPointerException을 처리하는 가장 좋은 방법은 무엇인가요?",
+      "tags": [
+        "Java",
+        "예외 처리",
+        "Null"
+      ],
+      "time": "2024-11-01",
+      "votes": 0,
+      "view": 0
+    },
+    {
+      "id": "435b",
+      "nickname": "async_await_pro",
+      "title": "Async/Await와 Promise의 차이",
+      "description": "JavaScript에서 Async/Await와 Promise의 차이가 궁금합니다.",
+      "tags": [
+        "JavaScript",
+        "비동기 처리",
+        "Promise"
+      ],
+      "time": "2024-11-01",
+      "votes": 0,
+      "view": 0
+    },
+    {
+      "id": "b7ef",
+      "nickname": "frontEndFanatic",
+      "title": "React에서 컴포넌트 상태 관리하기",
+      "description": "React로 개발할 때 상태 관리를 효과적으로 하는 방법은 무엇인가요?",
+      "tags": [
+        "React",
+        "상태 관리",
+        "프론트엔드"
+      ],
+      "time": "2024-11-01",
+      "votes": 0,
+      "view": 0
+    },
+    {
+      "id": "a4a7",
+      "nickname": "sql_master",
+      "title": "SQL에서 중복 데이터 제거하기",
+      "description": "SQL에서 중복된 데이터를 찾고 제거하는 방법이 궁금합니다.",
+      "tags": [
+        "SQL",
+        "데이터 정리",
+        "중복"
+      ],
+      "time": "2024-11-01",
+      "votes": 0,
+      "view": 0
+    },
+    {
+      "id": "6768",
+      "nickname": "networkGuru",
+      "title": "HTTP와 HTTPS의 차이",
+      "description": "HTTP와 HTTPS의 차이점과 HTTPS가 더 안전한 이유는 무엇인가요?",
+      "tags": [
+        "네트워크",
+        "HTTP",
+        "보안"
+      ],
+      "time": "2024-11-01",
+      "votes": 0,
+      "view": 0
+    },
+    {
+      "id": "e53b",
+      "nickname": "linux_lover",
+      "title": "리눅스에서 파일 권한 변경하기",
+      "description": "chmod 명령어로 리눅스 파일 권한을 변경하는 방법을 알고 싶습니다.",
+      "tags": [
+        "Linux",
+        "권한",
+        "chmod"
+      ],
+      "time": "2024-11-01",
+      "votes": 0,
+      "view": 0
+    },
+    {
+      "id": "094f",
+      "nickname": "cssArtist",
+      "title": "CSS 그라디언트 배경 만들기 2",
+      "description": "CSS로 배경에 그라디언트를 추가하는 방법이 궁금합니다.",
+      "tags": [
+        "CSS",
+        "디자인",
+        "그라디언트"
+      ],
+      "time": "2024-11-01",
+      "votes": 0,
+      "view": 0
+    }
+  ]
+}
